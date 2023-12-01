@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,8 +19,7 @@ namespace Infrastructure.DataX
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost;Integrated Security=true;Initial Catalog=QLSINHVIENSS;MultipleActiveResultSets=True;encrypt=true;trustservercertificate=true");
+            optionsBuilder.UseSqlServer("Server=localhost;Integrated Security=true;Initial Catalog=NameSQL;MultipleActiveResultSets=True;encrypt=true;trustservercertificate=true");
         }
-
     }
 }
